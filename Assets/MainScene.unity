@@ -331,8 +331,9 @@ GameObject:
   - component: {fileID: 602953630}
   - component: {fileID: 602953633}
   - component: {fileID: 602953634}
+  - component: {fileID: 602953635}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,9 +464,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690b3771694688449b678f509baa00bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  vertical: 0
-  changeTime: 3
+  speed: 2
+  timeToChange: 2
+  horizontal: 1
+--- !u!95 &602953635
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602953629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 991585ea8ccc4714eb4c439912fd456a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &847345799
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1017,7 @@ GameObject:
   - component: {fileID: 1488076672}
   - component: {fileID: 1488076675}
   - component: {fileID: 1488076676}
+  - component: {fileID: 1488076677}
   m_Layer: 0
   m_Name: Ruby
   m_TagString: Untagged
@@ -1128,6 +1149,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32452428, y: 0.41299438}
   m_EdgeRadius: 0
+--- !u!95 &1488076677
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488076671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b77822e0485373d40b5beb92e9a5e728, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1874736200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,7 +5513,12 @@ PrefabInstance:
     - target: {fileID: 7052512649772410534, guid: 0125640daaf4eff4ab1ed556f8a4bf42,
         type: 3}
       propertyPath: m_Name
-      value: Enemies
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052512649772410532, guid: 0125640daaf4eff4ab1ed556f8a4bf42,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7052512649772410523, guid: 0125640daaf4eff4ab1ed556f8a4bf42,
         type: 3}
